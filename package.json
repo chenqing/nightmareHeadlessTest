@@ -1,0 +1,17 @@
+{
+  "name": "nightmaretest",
+  "version": "1.0.0",
+  "description": "headless nightmare test",
+  "main": "index.js",
+  "scripts": {
+    "debug": "DEBUG=* npm start",
+    "start": "node index"
+  },
+  "author": "Gabriel Perales",
+  "license": "ISC",
+  "dependencies": {
+    "nightmare": "^2.2.0",
+    "vo": "^3.1.1",
+    "xvfb": "^0.2.3"
+  }
+}
