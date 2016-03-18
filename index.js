@@ -17,7 +17,6 @@ xvfb.start(function(){
 });
 
 function *run(){
-	// servernum will be at least 200 
 	var nightmare = new Nightmare({
 		width: 1280,
 		height: 700,
