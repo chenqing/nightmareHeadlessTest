@@ -12,3 +12,11 @@ $ npm install
 ```bash
 $ npm start
 ```
+
+## Run in a docker container
+
+```bash
+$ docker-compose build
+$ docker-compose up
+```
+
