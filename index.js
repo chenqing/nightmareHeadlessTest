@@ -13,6 +13,7 @@ xvfb.start(function(){
 	vo(run)(function(err, result){
 		if (err) throw err;
 		xvfb.stop();
+    console.log(result);
 	});
 });
 
@@ -24,12 +25,10 @@ function *run(){
 		waitTimeout: 6000
 	});
 
-	var title = yield nightmare
+	return yield nightmare
 		.goto('http://www.google.es')
 		.evaluate(function(){
-			console.log(document.title);
 			return document.title;
-		});
-	console.log(title);
-	yield nightmare.end();
+		})
+	  .end();
 }

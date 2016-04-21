@@ -13,7 +13,7 @@ $ npm install
 $ npm start
 ```
 
-## Run in a docker container
+## Run with Docker
 
 ```bash
 $ docker-compose build

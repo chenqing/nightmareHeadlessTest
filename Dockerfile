@@ -1,10 +1,10 @@
-FROM ubuntu:trusty
+FROM node:4.2
 
-MAINTAINER Gabriel Perales
+# Updating ubuntu packages
+RUN apt-get update
 
-RUN apt-get install -y curl && \
-  curl -sL https://deb.nodesource.com/setup_5.x | bash && \
-  apt-get install -y \
+# Installing the packages needed to run Nightmare
+RUN apt-get install -y \
   xvfb \
   x11-xkb-utils \
   xfonts-100dpi \
@@ -25,8 +25,7 @@ RUN apt-get install -y curl && \
   libxss1 \
   libnss3-dev \
   gcc-multilib \
-  g++-multilib \
-  nodejs
+  g++-multilib
 
 WORKDIR /usr/src
 
